@@ -20,7 +20,7 @@ public class result extends javax.swing.JFrame {
         {
             for (int j=0;j<staticstuff.seld[i];j++)
             {
-                int temp = staticstuff.maxcook();
+                int temp = staticstuff.mincook();
                 staticstuff.cookt[temp]+=staticstuff.obj.list.get(i).time;
                 if (staticstuff.delivery == 'P')
                 {
@@ -28,11 +28,11 @@ public class result extends javax.swing.JFrame {
                 }
                 if (staticstuff.delivery == 'P')
                 {
-                    staticstuff.totaltime+=staticstuff.cookcd[temp];
+                    staticstuff.totaltime+=staticstuff.cookmaxcd();
                 }
                 else if (staticstuff.delivery == 'H')
                 {
-                    staticstuff.totaltime+=staticstuff.cookt[temp];
+                    staticstuff.totaltime+=staticstuff.cookmaxt();
                 }
             }
         }

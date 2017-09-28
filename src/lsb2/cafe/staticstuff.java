@@ -24,10 +24,24 @@ public class staticstuff {
     public staticstuff(){
         
     }
-    public static int maxcook()
+    public static int mincook()
     {
-        int maxi = -1;
-        int max = -1;
+        int mini = 0;
+        int min = cookt[0];
+        for (int i=0;i<4;i++)
+        {
+            if (cookt[i]<min)
+            {
+                min = cookt[i];
+                mini = i;
+            }
+        }
+        return mini;
+    }
+    public static int cookmaxt()
+    {
+        int maxi = 0;
+        int max = cookt[0];
         for (int i=0;i<4;i++)
         {
             if (cookt[i]>max)
@@ -36,7 +50,21 @@ public class staticstuff {
                 maxi = i;
             }
         }
-        return maxi;
+        return max;
+    }
+    public static int cookmaxcd()
+    {
+        int maxi = 0;
+        int max = cookcd[0];
+        for (int i=0;i<4;i++)
+        {
+            if (cookt[i]>max)
+            {
+                max = cookcd[i];
+                maxi = i;
+            }
+        }
+        return max;
     }
     public static void resetall(){
         for (int i=0;i<15;i++)
